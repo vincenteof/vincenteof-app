@@ -5,7 +5,7 @@
 // } from "@ant-design/icons";
 
 // todo: add icons back
-export default function About() {
+export default function Index() {
   return (
     <div className="flex h-full flex-col mt-4 gap-8">
       <div>

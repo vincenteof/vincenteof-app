@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import NavLink from "@/components/navlink";
+import NavLink from "@/components/nav-link";
 
-export default function Page() {
+export default function Index() {
   return (
     <section className="flex h-full flex-col my-4">
       <article>

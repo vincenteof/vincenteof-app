@@ -1,4 +1,4 @@
-import NavLink from "@/components/navlink";
+import NavLink from "@/components/nav-link";
 
 export default function Header() {
   const noActiveClassName = "opacity-50 hover:opacity-100";
@@ -11,6 +11,7 @@ export default function Header() {
             <NavLink
               href="/"
               noActiveClassName={noActiveClassName}
+              exact
             >
               Home
             </NavLink>
@@ -25,10 +26,10 @@ export default function Header() {
           </li>
           <li className="px-2 py-1">
             <NavLink
-              href="/blog"
+              href="/posts"
               noActiveClassName={noActiveClassName}
             >
-              Blog
+              Posts
             </NavLink>
           </li>
         </ul>
