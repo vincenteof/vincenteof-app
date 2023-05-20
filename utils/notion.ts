@@ -1,5 +1,5 @@
 import { NotionAPI } from "notion-client";
-import { Collection, PageBlock } from "notion-types";
+import { Collection, Decoration, PageBlock } from "notion-types";
 import { getDateValue } from "notion-utils";
 import dayjs from "dayjs";
 
@@ -22,13 +22,13 @@ export function processDatabaseItem<T>(
     switch (collection.schema[key].type) {
       case "text":
       case "title":
-        item[propertyName] = value[0]?.[0];
+        item[propertyName] = value;
         break;
       case "date":
         const formattedDate = getDateValue(value);
         if (formattedDate?.type === "date") {
           const date = dayjs(formattedDate.start_date);
-          item[propertyName] = date.format("YYYY/MM/DD");
+          item[propertyName] = date.format("MMM D, YYYY");
         }
         break;
       case "checkbox":
@@ -67,5 +67,9 @@ const getDatabasePage = async <T>(id: string) => {
     recordMap,
   };
 };
+
+export function textDecorationsToString(decorations: Decoration[]): string {
+  return decorations.map((decoration) => decoration[0]).join("");
+}
 
 export { notion, getDatabase, getDatabasePage };
