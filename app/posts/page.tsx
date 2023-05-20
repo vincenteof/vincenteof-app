@@ -14,7 +14,7 @@ export default async function Index() {
             <NavLink
               key={slug}
               href={`/posts/${slug}`}
-              className="block max-w-2xl"
+              className="block max-w-2xl mt-2 mb-6"
             >
               <li className="flex gap-2 items-center">
                 <div className="opacity-80 hover:opacity-100">{textDecorationsToString(post.Name)}</div>
