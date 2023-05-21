@@ -120,7 +120,7 @@ function BlockRenderer({
     }
     case "code": {
       return (
-        <div className="-mx-2 md:-mx-4 my-6">
+        <div className="my-4">
           <HighlightedCode
             language={textDecorationsToString(
               block.properties.language
