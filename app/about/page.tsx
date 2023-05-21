@@ -123,7 +123,7 @@ export default function Index() {
             </div>
           </a>
           <a
-            href="https://github.com/vincenteof"
+            href="https://twitter.com/vincenteof"
             target="_blank"
             rel="noreferrer"
             className="flex w-full border border-neutral-200  rounded-lg p-4 no-underline items-center text-neutral-800  hover:bg-neutral-100 transition-all justify-between"
