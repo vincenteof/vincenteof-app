@@ -11,10 +11,10 @@ export default async function Index({ params }: { params: { slug: string } }) {
   const { item: post, recordMap } = await getDatabasePage<any>(postId);
   return (
     <div className="w-full my-2">
-      <div className="text-2xl font-semibold mb-8 text-neutral-900">
-        {textDecorationsToString(post.Name)}
-      </div>
-      <NotionBlock blockId={postId} recordMap={recordMap} />
+      <article className="prose">
+        <h1>{textDecorationsToString(post.Name)}</h1>
+        <NotionBlock blockId={postId} recordMap={recordMap} />
+      </article>
     </div>
   );
 }

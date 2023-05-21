@@ -11,6 +11,11 @@ const nextConfig = {
         port: '',
         pathname: '/u/14847208',
       },
+      {
+        protocol: "https",
+        hostname: "www.notion.so",
+        pathname: "/image/**",
+      },
     ],
   },
 };

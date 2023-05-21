@@ -1,11 +1,53 @@
 import { NotionAPI } from "notion-client";
-import { Collection, Decoration, PageBlock } from "notion-types";
+import { BlockMap, Collection, Decoration, PageBlock } from "notion-types";
 import { getDateValue } from "notion-utils";
 import dayjs from "dayjs";
 
 const notion = new NotionAPI();
 
 export type DatabaseItem = { id: string } & { [key: string]: any };
+
+export const groupBlockContent = (blockMap: BlockMap): string[][] => {
+  const output: string[][] = []
+
+  let lastType: string | undefined = undefined
+  let index = -1
+
+  Object.keys(blockMap).forEach((id) => {
+    const blockValue = blockMap[id]?.value
+
+    if (blockValue) {
+      blockValue.content?.forEach((blockId) => {
+        const blockType = blockMap[blockId]?.value?.type
+
+        if (blockType && blockType !== lastType) {
+          index++
+          lastType = blockType
+          output[index] = []
+        }
+
+        if (index > -1) {
+          output[index].push(blockId)
+        }
+      })
+    }
+
+    lastType = undefined
+  })
+
+  return output
+}
+
+export const getListNumber = (blockId: string, blockMap: BlockMap) => {
+  const groups = groupBlockContent(blockMap)
+  const group = groups.find((g) => g.includes(blockId))
+
+  if (!group) {
+    return
+  }
+
+  return group.indexOf(blockId) + 1
+}
 
 export function processDatabaseItem<T>(
   page: PageBlock,
