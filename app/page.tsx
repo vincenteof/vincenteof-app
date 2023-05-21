@@ -1,5 +1,8 @@
 import Image from 'next/image'
 import NavLink from "@/components/nav-link";
+import GithubIcon from "@/components/icons/github"
+import TwitterIcon from "@/components/icons/twitter"
+
 
 export default function Index() {
   return (
@@ -43,7 +46,7 @@ export default function Index() {
                 rel="noreferrer"
                 className="flex items-center gap-1 underline underline-offset-2 text-neutral-800"
               >
-                {/* <GithubOutlined /> */}
+                <GithubIcon />
                 Github
               </a>
               ,
@@ -53,7 +56,7 @@ export default function Index() {
                 rel="noreferrer"
                 className="flex items-center gap-1 underline underline-offset-2 text-neutral-800"
               >
-                {/* <TwitterOutlined /> */}
+                <TwitterIcon />
                 Twitter
               </a>
             </p>

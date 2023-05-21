@@ -1,10 +1,7 @@
-// import {
-//   GithubOutlined,
-//   TwitterOutlined,
-//   MailOutlined,
-// } from "@ant-design/icons";
+import GithubIcon from "@/components/icons/github"
+import TwitterIcon from "@/components/icons/twitter"
+import EmailIcon from "@/components/icons/email"
 
-// todo: add icons back
 export default function Index() {
   return (
     <div className="flex h-full flex-col mt-4 gap-8">
@@ -24,7 +21,7 @@ export default function Index() {
               from backend to frontend during my career.
             </li>
             <li>
-              My favorite stacks:
+              My tech stack:
               <a
                 href="https://reactjs.org/"
                 target="_blank"
@@ -35,12 +32,12 @@ export default function Index() {
               </a>
               ,
               <a
-                href="https://remix.run/"
+                href="https://nextjs.org/"
                 target="_blank"
                 rel="noreferrer"
                 className="underline underline-offset-2 px-1"
               >
-                Remix
+                Next.js
               </a>
               ,
               <a
@@ -91,12 +88,12 @@ export default function Index() {
         <p className="text-neutral-800">
           This site is powered by
           <a
-            href="https://remix.run/"
+            href="https://nextjs.org/"
             target="_blank"
             rel="noreferrer"
             className="underline underline-offset-2 px-1"
           >
-            Remix
+            Next.js
           </a>
           and is under active iteration. Currently, I primarily use this site
           for writing and recording. If you have any opinion or suggestion,
@@ -121,7 +118,7 @@ export default function Index() {
             className="flex w-full border border-neutral-200  rounded-lg p-4 no-underline items-center text-neutral-800 hover:bg-neutral-100 transition-all justify-between"
           >
             <div className="flex items-center">
-              {/* <GithubOutlined style={{ fontSize: "1.125rem" }} /> */}
+              <GithubIcon style={{ fontSize: "1.125rem" }} />
               <div className="ml-3">GitHub</div>
             </div>
           </a>
@@ -132,7 +129,7 @@ export default function Index() {
             className="flex w-full border border-neutral-200  rounded-lg p-4 no-underline items-center text-neutral-800  hover:bg-neutral-100 transition-all justify-between"
           >
             <div className="flex items-center">
-              {/* <TwitterOutlined style={{ fontSize: "1.125rem" }} /> */}
+              <TwitterIcon style={{ fontSize: "1.125rem" }} />
               <div className="ml-3">Twitter</div>
             </div>
           </a>
@@ -143,7 +140,7 @@ export default function Index() {
             className="flex w-full border border-neutral-200 rounded-lg p-4 no-underline items-center text-neutral-800 hover:bg-neutral-100 transition-all justify-between"
           >
             <div className="flex items-center">
-              {/* <MailOutlined style={{ fontSize: "1.125rem" }} /> */}
+              <EmailIcon style={{ fontSize: "1.125rem" }} />
               <div className="ml-3">Email</div>
             </div>
           </a>
