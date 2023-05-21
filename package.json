@@ -13,17 +13,27 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^13.3.4",
+    "@notionhq/client": "^2.2.5",
+    "@types/prismjs": "^1.26.0",
+    "classnames": "^2.3.2",
+    "dayjs": "^1.11.7",
+    "eslint-config-next": "^13.4.1",
+    "next": "^13.4.1",
+    "notion-client": "^6.16.0",
+    "notion-types": "^6.16.0",
+    "notion-utils": "^6.16.0",
+    "prismjs": "^1.29.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-tweet-embed": "^2.0.0"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@types/node": "^18.16.3",
     "@types/react": "^18.2.4",
     "@types/react-dom": "^18.2.3",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.39.0",
-    "eslint-config-next": "^13.3.4",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.0.4"
